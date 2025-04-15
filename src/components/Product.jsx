@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { appContext } from "../App";
+import React, { useContext } from 'react'
+import { CartContext } from "./CartContext";
 
 function Product({ product }) {
-  const cart = useContext(appContext);
+  const {  addToCart } = useContext(CartContext);
 
   return (
     <div className="col-3">
@@ -28,9 +28,14 @@ function Product({ product }) {
           <p className="card-text">{product.title}</p>
           <div className="d-flex justify-content-between align-items-center">
             <div className="btn-group">
-              <button type="button" className="btn btn-lg btn-success">
-                Add To Cart
-              </button>
+            <button
+  type="button"
+  className="btn btn-lg btn-success"
+  onClick={() => addToCart(product)} 
+>
+  Add To Cart
+</button>
+
             </div>
             <p className="text-muted">{product.price}</p>
           </div>

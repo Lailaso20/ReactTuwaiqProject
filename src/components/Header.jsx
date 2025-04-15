@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom"; 
+
 
 function Header() {
   const NavLinks = [
@@ -18,6 +19,10 @@ function Header() {
     {
       title: "User",
       url: "/user",
+    },
+    {
+      title: "Cart",
+      url: "/Cart",
     },
   ];
   return (
@@ -53,9 +58,7 @@ function Header() {
               );
             })}
           </ul>
-          <Link className="navbar-text" to={"/login"}>
-            Login
-          </Link>
+  
         </div>
       </div>
     </nav>

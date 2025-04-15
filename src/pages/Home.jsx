@@ -1,18 +1,14 @@
-import React from "react";
-import Header from "../components/Header";
+// HomePage.jsx
 import Hero from "../components/Hero";
 import Slider from "../components/Slider";
 import ProductList from "../components/ProductList";
-import Footer from "../components/Footer";
 
-function HomePage({ cart, setCart }) {
+function HomePage() {
   return (
     <div>
-      <Header />
       <Hero />
       <Slider />
       <ProductList />
-      <Footer />
     </div>
   );
 }
