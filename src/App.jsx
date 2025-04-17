@@ -8,6 +8,10 @@ import Signup from "./pages/Signup.jsx";
 import "./App.css";
 import Login from "./pages/Login.jsx";
 import { Bounce, ToastContainer } from "react-toastify";
+import UserList from "./pages/UserList.jsx";
+import UpdateUser from "./components/UpdateUser.jsx";
+import AddUser from "./components/AddUser.jsx";
+import Signup from "./pages/SignUp.jsx";
 
 function App() {
   return (
@@ -15,10 +19,15 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/dashboard" element={<DashBoard />}></Route>
-        <Route path="/user" element={<User />}></Route>
+        <Route path="/user" element={<User />}>
+          <Route index element={<UserList />} />
+          <Route path="update/:id" element={<UpdateUser />} />
+          <Route path="adduser" element={<AddUser />} />
+        </Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
+
       </Routes>
       <ToastContainer
         position="top-right"

@@ -1,14 +1,13 @@
-import React from "react";
+import Header from "../components/Header";
+import { Outlet } from "react-router-dom";
 
 function User() {
-  const [user, setUsers] = useState ([]);
-  const fetchUsers = async ()=>{
-    const res = await axios.get('https://jsonplaceholder.typicode.com/users');
-    console.log(res);
-const userData =res.data;
-setUsers(userData);
-  };
-  return <div>User</div>;
+  return (
+    <div>
+      <Header />
+      <Outlet />
+    </div>
+  );
 }
 
 export default User;
