@@ -4,6 +4,7 @@ import HomePage from "./pages/Home";
 import Cart from "./pages/Cart";
 import DashBoard from "./pages/Dashboard.jsx";
 import User from "./pages/User.jsx";
+import Signup from "./pages/Signup.jsx";
 import "./App.css";
 import Login from "./pages/Login.jsx";
 import { Bounce, ToastContainer } from "react-toastify";
