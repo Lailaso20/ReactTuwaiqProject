@@ -11,7 +11,6 @@ import { Bounce, ToastContainer } from "react-toastify";
 import UserList from "./pages/UserList.jsx";
 import UpdateUser from "./components/UpdateUser.jsx";
 import AddUser from "./components/AddUser.jsx";
-import Signup from "./pages/SignUp.jsx";
 
 function App() {
   return (
