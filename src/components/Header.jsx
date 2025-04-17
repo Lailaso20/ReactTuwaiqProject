@@ -64,9 +64,14 @@ function Header({ children }) {
                 );
               })}
             </ul>
-            <Link className="navbar-text" to={"/login"}>
-              Login
-            </Link>
+            <div style={{ display: "flex", gap: "20px" }}>
+  <Link className="navbar-text" to="/login">
+    Login
+  </Link>
+  <Link className="navbar-text" to="/Signup">
+    Signup
+  </Link>
+</div>
           </div>
         </div>
       </nav>
